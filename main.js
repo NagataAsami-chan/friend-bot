@@ -33,7 +33,7 @@ client.on('message', message =>{
         message.channel.send('No worries')
     }
     if (command == 'dick is') {
-        message.channel.send('gay')
+        message.channel.send(' gay')
     }
     if (command == 'me') {
         message.channel.send('I am here How can I help you')
