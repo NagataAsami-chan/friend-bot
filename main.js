@@ -44,6 +44,10 @@ client.on('message', message =>{
     if (command == 'g') {
         message.channel.send('gg')
     }
+    
+    if (command == 'lazy') {
+        message.channel.send('Sorry everone Im too lazy thats why I type commend ')
+    }
 });
 
 //Hello
