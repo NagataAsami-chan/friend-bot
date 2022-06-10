@@ -26,7 +26,7 @@ client.on('message', message =>{
     if (command == 'hello') {
         message.channel.send('nice to meet you How are you today')
     }
-    if (command == 'IAmFine') {
+    if (command == 'iamfine') {
         message.channel.send('Nice')
     }
     
