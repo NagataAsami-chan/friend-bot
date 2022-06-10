@@ -29,6 +29,9 @@ client.on('message', message =>{
     if (command == 'bye') {
         message.channel.send('Stay with me please')
     }
+    if (command == 'kk') {
+        message.channel.send('kkk')
+    }
 });
 
 //Hello
