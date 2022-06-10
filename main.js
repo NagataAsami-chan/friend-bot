@@ -32,6 +32,8 @@ client.on('message', message =>{
     if (command == 'thankyou') {
         message.channel.send('No worries')
     }
+    if (command == 'do you like DEKKSON') {
+        message.channel.send('No he is gay')
 });
 
 //Hello
