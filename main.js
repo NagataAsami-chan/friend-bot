@@ -29,7 +29,7 @@ client.on('message', message =>{
     if (command == 'bye') {
         message.channel.send('Stay with me please')
     }
-    if (command == 'Thankyou') {
+    if (command == 'thankyou') {
         message.channel.send('No worries')
     }
 });
