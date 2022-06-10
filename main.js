@@ -38,6 +38,12 @@ client.on('message', message =>{
     if (command == 'me') {
         message.channel.send('I am here How can I help you')
     }
+    if (command == 'n') {
+        message.channel.send('nice')
+    }
+    if (command == 'g') {
+        message.channel.send('gg')
+    }
 });
 
 //Hello
