@@ -32,7 +32,7 @@ client.on('message', message =>{
     if (command == 'thankyou') {
         message.channel.send('No worries')
     }
-    if (command == 'do you like dekkson') {
+    if (command == 'DoYouLikeDekkson') {
         message.channel.send('No he is gay')
     }
 });
