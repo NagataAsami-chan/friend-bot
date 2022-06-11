@@ -59,7 +59,7 @@ client.on('message', message =>{
         message.channel.send('thankyou >-<')
     }
     if (command == 'whereisalvis') {
-        message.channel.send('He will be back soon you can talk to me if you want as well!!')
+        message.channel.send('He will be back soon. You can talk to me if you want as well!!')
     }
     if (command == '') {
         message.channel.send('')
