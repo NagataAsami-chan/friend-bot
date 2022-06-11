@@ -35,7 +35,19 @@ client.on('message', message =>{
     if (command == 'DoYouLikeDekkson') {
         message.channel.send('No he is gay')
     }
+    if (command == 'join') {
+        if(!message.member.voice.channel) return message.channel.send("join vc first");
+        message.member.voice.channel.join(); 
+    }
+    if (command == 'leave') {
+        if(!message.guild.me.voice.channel) return message.channel.send("I'm not in ");
+        message.guild.me.voice.channel.leave();  
+    }
+});
+
+client.on('ready', () => {
+    client.user.setActivity(`me getting tested`, { type: "WATCHING" })
 });
 
 //Hello
-client.login(process.env.token); //The bot token which have setted in heroku
+client.login('OTg0NzA1MDg0ODE2NTIzMzI2.G_on4w.wre2zfjdAqlj_CW7a7xQED7Yn3SqbtcMLi-ob8'); //The bot token which have setted in heroku
