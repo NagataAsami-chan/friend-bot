@@ -43,6 +43,8 @@ client.on('message', message =>{
     if (command == 'lazy') {
         message.channel.send('Sorry everone Im too lazy thats why I type commend ')
     }
+    if (command == 'cld') {
+        message.channel.send('Clam down!!')}
 });
 
 //Hello
