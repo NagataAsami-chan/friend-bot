@@ -45,7 +45,9 @@ client.on('message', message =>{
     }
     if (command == 'cld') {
         message.channel.send('Clam down!!')}
+    if (command == 'can I talk to you') {
+        message.channel.send('Why not!!')}
 });
 
-//Hello
+
 client.login(process.env.token); //The bot token which have setted in heroku
