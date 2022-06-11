@@ -50,4 +50,4 @@ client.on('ready', () => {
 });
 
 //Hello
-client.login('OTg0NzA1MDg0ODE2NTIzMzI2.G_on4w.wre2zfjdAqlj_CW7a7xQED7Yn3SqbtcMLi-ob8'); //The bot token which have setted in heroku
+client.login(process.env.token); //The bot token which have setted in heroku
