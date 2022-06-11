@@ -58,8 +58,8 @@ client.on('message', message =>{
     if (command == 'youaresocute') {
         message.channel.send('thankyou >-<')
     }
-    if (command == '') {
-        message.channel.send('')
+    if (command == 'whereisalvis') {
+        message.channel.send('He will be back soon you can talk to me if you want as well!!')
     }
     if (command == '') {
         message.channel.send('')
