@@ -49,7 +49,32 @@ client.on('message', message =>{
     if (command == 'talktome') {
         message.channel.send('Why not!!')
     }
+    if (command == 'can i talk to you') {
+        message.channel.send('Why not!!')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
 });
+//10 commend in total 
 
 
 client.login(process.env.token); //The bot token which have setted in heroku
