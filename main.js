@@ -4,7 +4,7 @@ const { MessageAttachment, MessageEmbed } = require('discord.js');
 
 const client = new Discord.Client();
 
-const prefix = '!!'
+const prefix = '``'
 
 
 client.once('ready', () => {
@@ -24,16 +24,57 @@ client.on('message', message =>{
         message.channel.send('ping')
     };
     if (command == 'hello') {
-        message.channel.send('nice to meet you')
+        message.channel.send('nice to meet you How are you today')
     }
+    if (command == 'iamfine') {
+        message.channel.send('Nice')
+    }
+    
     if (command == 'bye') {
         message.channel.send('Stay with me please')
     }
     if (command == 'thankyou') {
         message.channel.send('No worries')
     }
-    if (command == 'DoYouLikeDekkson') {
-        message.channel.send('No he is gay')
+    if (command == 'me') {
+        message.channel.send('I am here How can I help you')
+    }
+    
+    if (command == 'lazy') {
+        message.channel.send('Sorry everone Im too lazy thats why I type commend ')
+    }
+    if (command == 'cld') {
+        message.channel.send('Clam down!!')
+    }
+    if (command == 'talktome') {
+        message.channel.send('Why not!!')
+    }
+    if (command == 'canitalktoyou') {
+        message.channel.send('Why not!!')
+    }
+    if (command == 'youaresokind') {
+        message.channel.send('thankyou >-<')
+    }
+    if (command == 'youaresocute') {
+        message.channel.send('thankyou >-<')
+    }
+    if (command == 'whereisalvis') {
+        message.channel.send('He will be back soon. You can talk to me if you want as well!!')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
+    }
+    if (command == '') {
+        message.channel.send('')
     }
     if (command == 'join') {
         if(!message.member.voice.channel) return message.channel.send("join vc first");
@@ -48,6 +89,7 @@ client.on('message', message =>{
 client.on('ready', () => {
     client.user.setActivity(`me getting tested`, { type: "WATCHING" })
 });
+//10 commend in total 
 
-//Hello
+
 client.login(process.env.token); //The bot token which have setted in heroku
