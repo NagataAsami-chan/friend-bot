@@ -45,7 +45,7 @@ client.on('message', message =>{
     }
     if (command == 'cld') {
         message.channel.send('Clam down!!')}
-    if (command == 'can I talk to you') {
+    if (command == 'Talktome') {
         message.channel.send('Why not!!')}
 });
 
