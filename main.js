@@ -4,7 +4,7 @@ const { MessageAttachment, MessageEmbed } = require('discord.js');
 
 const client = new Discord.Client();
 
-const prefix = '!!'
+const prefix = '``'
 
 
 client.once('ready', () => {
