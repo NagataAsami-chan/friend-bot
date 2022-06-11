@@ -49,7 +49,7 @@ client.on('message', message =>{
     if (command == 'talktome') {
         message.channel.send('Why not!!')
     }
-    if (command == 'can i talk to you') {
+    if (command == 'canitalktoyou') {
         message.channel.send('Why not!!')
     }
     if (command == '') {
