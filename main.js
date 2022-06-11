@@ -77,7 +77,7 @@ client.on('message', message =>{
         message.channel.send('')
     }
     if (command == 'join') {
-        if(!message.member.voice.channel) return message.channel.send("join vc first");
+        if(!message.member.voice.channel) return message.channel.send("Please join voice channel first");
         message.member.voice.channel.join(); 
     }
     if (command == 'leave') {
