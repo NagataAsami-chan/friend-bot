@@ -52,8 +52,11 @@ client.on('message', message =>{
     if (command == 'canitalktoyou') {
         message.channel.send('Why not!!')
     }
-    if (command == '') {
-        message.channel.send('')
+    if (command == 'youaresokind') {
+        message.channel.send('thankyou >-<')
+    }
+    if (command == 'youaresocute') {
+        message.channel.send('thankyou >-<')
     }
     if (command == '') {
         message.channel.send('')
