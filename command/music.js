@@ -1,4 +1,6 @@
-const ytdl = require('play-dl');
+const { Intents, Client } = require('discord.js')
+const play = require('play-dl');
+const { createAudioPlayer, createAudioResource , StreamType, demuxProbe, joinVoiceChannel, NoSubscriberBehavior, AudioPlayerStatus, VoiceConnectionStatus, getVoiceConnection } = require('@discordjs/voice')
 const ytSearch = require('yt-search');
 const { VoiceChannel } = require('discord.js');
 
