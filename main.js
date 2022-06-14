@@ -6,6 +6,15 @@ const client = new Discord.Client();
 
 const prefix = '``'
 
+const fs = require('fs');
+
+client.commands = new Discord.Collection();
+
+const commandsFile = fs.readdirSync('./command/').filter(file => file.endsWith('.js'));
+for (const file of commandsFile) {
+    const command = require(`./command/${file}`)
+    client.commands.set(command.name, command)
+}
 
 client.once('ready', () => {
     //Write logs when the bot is up
