@@ -1,4 +1,4 @@
-const ytdl = require('ytdl-core');
+const ytdl = require('play-dl');
 const ytSearch = require('yt-search');
 const { VoiceChannel } = require('discord.js');
 
