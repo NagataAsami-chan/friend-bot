@@ -18,7 +18,7 @@ module.exports = {
 
         if (music) {
             const stream = ytdl(music.url, {filter: 'audioonly'})
-            connection.play(stream, {seek: 0, volume: 1})
+            connection.play(await stream, {type: 'opus'})
             
             await message.reply(`Now playing ${music.title}`)
         } else message.channel.send('no video found')
