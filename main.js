@@ -73,8 +73,8 @@ client.on('message', message =>{
     if (command == '') {
         message.channel.send('')
     }
-    if (command == '') {
-        message.channel.send('')
+    if (command == 'play') {
+        client.commands.get('play').execute(message, args)
     }
     if (command == 'join') {
         if(!message.member.voice.channel) return message.channel.send("Please join voice channel first");
