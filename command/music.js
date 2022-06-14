@@ -29,7 +29,6 @@ module.exports = {
             adapterCreator: message.guild.voiceAdapterCreator
         })
 
-        let args = message.content.split('play')[1]
         let yt_info = await play.search(args, {
             limit: 1
         })
