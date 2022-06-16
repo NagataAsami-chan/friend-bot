@@ -70,8 +70,8 @@ client.on('message', message =>{
     if (command == 'whereisalvis') {
         message.channel.send('He will be back soon. You can talk to me if you want as well!!')
     }
-    if (command == '') {
-        message.channel.send('')
+    if (command == 'workinghours') {
+        message.channel.send('Monday to Saturday ( EST 11am - 9:30 pm) Sunday (EST 9am - 8pm)')
     }
     if (command == '') {
         message.channel.send('')
