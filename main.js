@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 
+const { Player } = require('discord-player');
+
 const { MessageAttachment, MessageEmbed } = require('discord.js');
 
 const client = new Discord.Client();
@@ -70,8 +72,8 @@ client.on('message', message =>{
     if (command == 'whereisalvis') {
         message.channel.send('He will be back soon. You can talk to me if you want as well!!')
     }
-    if (command == 'workinghours') {
-        message.channel.send('Monday to Saturday ( EST 11am - 9:30 pm) Sunday (EST 9am - 8pm)')
+    if (command == '') {
+        message.channel.send('')
     }
     if (command == '') {
         message.channel.send('')
@@ -94,6 +96,9 @@ client.on('message', message =>{
         message.guild.me.voice.channel.leave();  
     }
 });
+client.config = require('./config');
+
+global.player = new Player(client, client.config.opt.discordPlayer);
 
 client.on('ready', () => {
     client.user.setActivity(`me getting tested`, { type: "WATCHING" })
