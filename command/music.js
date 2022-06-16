@@ -1,27 +1,35 @@
-
-const ytdl = require('ytdl-core-discord');
-const ytSearch = require('yt-search');
-const { VoiceChannel } = require('discord.js');
+const { QueryType } = require('discord-player');
 
 module.exports = {
     name: 'play',
-    async execute(message, args) {
-        const vc = message.member.voice.channel;
-        if (!args.length) return message.channel.send('???')
+    aliases: ['p'],
+    voiceChannel: true,
 
-        const findMusic = async (query) => {
-            const result = await ytSearch (query) ;
-            return (result.videos.length > 1) ? result.videos[0] : null
+    async execute(client, message, args) {
+        if (!args[0]) return message.channel.send(`???`);
+
+        const res = await player.search(args.join(' '), {
+            requestedBy: message.member,
+            searchEngine: QueryType.AUTO
+        });
+
+        if (!res || !res.tracks.length) return message.channel.send(`cant find anything`);
+
+        const queue = await player.createQueue(message.guild, {
+            metadata: message.channel
+        });
+
+        try {
+            if (!queue.connection) await queue.connect(message.member.voice.channel);
+        } catch {
+            await player.deleteQueue(message.guild.id);
+            return message.channel.send(`can't join the voice channel`);
         }
-        const music = await findMusic(args.join(' '))
 
-        const connection = await vc.join()
+        await message.channel.send(`what the`);
 
-        if (music) {
-            const stream = ytdl(music.url, {filter: 'audioonly'})
-            connection.play(await stream, {type: 'opus'})
-            
-            await message.reply(`Now playing ${music.title}`)
-        } else message.channel.send('no video found')
-        }
-    }
+        res.playlist ? queue.addTracks(res.tracks) : queue.addTrack(res.tracks[0]);
+
+        if (!queue.playing) await queue.play();
+    },
+};
