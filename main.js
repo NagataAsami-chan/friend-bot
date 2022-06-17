@@ -75,8 +75,8 @@ client.on('message', message =>{
     if (command == 'deklink') {
         message.channel.send('https://discord.gg/DsG9YmVptw')
     }
-    if (command == '') {
-        message.channel.send('')
+    if (command == 'whoareyou') {
+        message.channel.send('I am Hizuki Yui ')
     }
     if (command == '') {
         message.channel.send('')
