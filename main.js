@@ -101,7 +101,7 @@ client.config = require('./config');
 global.player = new Player(client, client.config.opt.discordPlayer);
 
 client.on('ready', () => {
-    client.user.setActivity(`Koikatsu Party`, { type: "Playing" })
+    client.user.setActivity(`youtube music`, { type: "Playing" })
 });
 //10 commend in total 
 
