@@ -78,8 +78,8 @@ client.on('message', message =>{
     if (command == 'whoareyou') {
         message.channel.send('I am Hizuki Yui ')
     }
-    if (command == '') {
-        message.channel.send('')
+    if (command == 'ok') {
+        message.channel.send('>~<')
     }
     if (command == '') {
         message.channel.send('')
