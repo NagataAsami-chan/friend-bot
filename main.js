@@ -92,7 +92,7 @@ client.on('message', message =>{
         message.member.voice.channel.join(); 
     }
     if (command == 'leave') {
-        if(!message.guild.me.voice.channel) return message.channel.send("I'm not in ");
+        if(!message.guild.me.voice.channel) return message.channel.send("only can join if I leave ");
         message.guild.me.voice.channel.leave();  
     }
 });
