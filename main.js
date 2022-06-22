@@ -81,8 +81,8 @@ client.on('message', message =>{
     if (command == 'ok') {
         message.channel.send('>~<')
     }
-    if (command == '') {
-        message.channel.send('')
+    if (command == 'mylink') {
+        message.channel.send('https://discord.gg/Ypce73WqNy')
     }
     if (command == 'play') {
         client.commands.get('play').execute(message, args)
