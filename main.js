@@ -100,7 +100,7 @@ client.on('message', message =>{
         if(!message.guild.me.voice.channel) return message.channel.send("only can leave if I join ");
         message.guild.me.voice.channel.leave();  
     }
-});
+}});
 client.config = require('./config');
 
 global.player = new Player(client, client.config.opt.discordPlayer);
