@@ -80,7 +80,7 @@ client.on('message', message =>{
         message.channel.send('https://discord.gg/DsG9YmVptw')
     }
     if (command == 'whoareyou') {
-        message.channel.send(' 私 は 時崎くるみ ')
+        message.channel.send(' あたしは時崎くるみ ')
     }
     if (command == 'ok') {
         message.channel.send('>~<')
