@@ -37,6 +37,12 @@ client.on('message', message =>{
     if (command == 'hello') {
         message.channel.send('nice to meet you How are you today')
     }
+     if (command == 'mesad') {
+        message.channel.send('It is ok')
+    }    
+    if (command == 'Iamsad') {
+        message.channel.send('It is ok')
+    }   
     if (command == 'imfine') {
         message.channel.send('Nice')
     }
