@@ -40,7 +40,7 @@ client.on('message', message =>{
      if (command == 'mesad') {
         message.channel.send('It is ok')
     }    
-    if (command == 'Iamsad') {
+    if (command == 'iamsad') {
         message.channel.send('It is ok')
     }   
     if (command == 'imfine') {
@@ -120,7 +120,7 @@ client.config = require('./config');
 global.player = new Player(client, client.config.opt.discordPlayer);
 
 client.on('ready', () => {
-    client.user.setActivity(`youtube music`, { type: "playing" })
+    client.user.setActivity(`Monster Hunter Rise`, { type: "playing" })
 });
 //10 commend in total 
 
