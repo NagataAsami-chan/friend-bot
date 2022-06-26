@@ -82,6 +82,9 @@ client.on('message', message =>{
     if (command == 'whoareyou') {
         message.channel.send(' あたしは時崎くるみ ')
     }
+    if (command == 'whoyoulike') {
+        message.channel.send(' I love Rioshi. The best admin in the world ')
+    }
     if (command == 'ok') {
         message.channel.send('>~<')
     }
@@ -96,6 +99,7 @@ client.on('message', message =>{
         client.commands.get('play').execute(message, args)
         
     }
+              
     if (command == 'join') {
         if(!message.member.voice.channel) return message.channel.send("Please join voice channel first");
         message.member.voice.channel.join(); 
