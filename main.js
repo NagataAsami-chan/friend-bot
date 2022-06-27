@@ -53,7 +53,7 @@ client.on('message', message =>{
     
     if (command == 'bye') {
         message.channel.send('Stay with me please')
-    }
+    }ali
     if (command == 'thankyou') {
         message.channel.send('No worries')
     }
