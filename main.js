@@ -102,7 +102,7 @@ client.on('message', message =>{
     
     if (command == 'kcklink') {
         message.channel.send('https://discord.gg/xW2GyYj5kK')
-    
+    }
     if (command == 'play') {
         client.commands.get('play').execute(message, args)
         
@@ -118,7 +118,7 @@ client.on('message', message =>{
     if (command == 'play') {
         client.commands.get('play').execute(message, args)
     }
-}});
+});
 client.config = require('./config');
 
 global.player = new Player(client, client.config.opt.discordPlayer);
