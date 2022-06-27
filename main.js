@@ -73,10 +73,10 @@ client.on('message', message =>{
     if (command == 'canitalktoyou') {
         message.channel.send('Why not!!')
     }
-    if (command == 'youaresokind') {
+    if (command == 'yousokind') {
         message.channel.send('thankyou >-<')
     }
-    if (command == 'youaresocute') {
+    if (command == 'yousocute') {
         message.channel.send('thankyou >-<')
     }
     if (command == 'whereisalvis') {
