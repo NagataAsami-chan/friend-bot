@@ -37,7 +37,7 @@ client.on('message', message =>{
     if (command == 'hello') {
         message.channel.send('nice to meet you How are you today')
     }
-     if (command == 'mesad') {
+    if (command == 'mesad') {
         message.channel.send('It is ok')
     }    
     if (command == 'iamsad') {
@@ -53,14 +53,13 @@ client.on('message', message =>{
     
     if (command == 'bye') {
         message.channel.send('Stay with me please')
-    }ali
+    }
     if (command == 'thankyou') {
         message.channel.send('No worries')
     }
     if (command == 'me') {
         message.channel.send('I am here How can I help you')
     }
-    
     if (command == 'lazy') {
         message.channel.send('Sorry everone Im too lazy thats why I type commend ')
     }
@@ -116,6 +115,9 @@ client.on('message', message =>{
     if (command == 'leave') {
         if(!message.guild.me.voice.channel) return message.channel.send("only can leave if I join ");
         message.guild.me.voice.channel.leave();  
+    }
+    if (command == 'play') {
+        client.commands.get('play').execute(message, args)
     }
 }});
 client.config = require('./config');
