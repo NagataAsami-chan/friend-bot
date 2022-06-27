@@ -6,7 +6,7 @@ module.exports = {
     voiceChannel: true,
 
     async execute(client, message, args) {
-        if (!args[0]) return message.channel.send(`???`);
+        if (!args) return message.channel.send(`???`);
 
         const res = await player.search(args.join(' '), {
             requestedBy: message.member,
