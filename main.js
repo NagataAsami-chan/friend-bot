@@ -107,14 +107,13 @@ client.on('message', message =>{
         client.commands.get('play').execute(message, args)
         
     }
-              
     if (command == 'join') {
         if(!message.member.voice.channel) return message.channel.send("Please join voice channel first");
-        message.member.voice.channel.join(); 
+        message.member.voice.channel.join()
     }
     if (command == 'leave') {
-        if(!message.guild.me.voice.channel) return message.channel.send("only can leave if I join ");
-        message.guild.me.voice.channel.leave();  
+        if(!message.guild.me.voice.channel) return message.channel.send("I'm not in a voice channel"); 
+        message.guild.me.voice.channel.leave();
     }
     if (command == 'play') {
         client.commands.get('play').execute(message, args)
