@@ -103,10 +103,6 @@ client.on('message', message =>{
     if (command == 'kcklink') {
         message.channel.send('https://discord.gg/xW2GyYj5kK')
     }
-    if (command == 'play') {
-        client.commands.get('play').execute(message, args)
-        
-    }
     if (command == 'join') {
         if(!message.member.voice.channel) return message.channel.send("Please join voice channel first");
         message.member.voice.channel.join()
