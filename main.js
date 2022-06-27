@@ -91,6 +91,9 @@ client.on('message', message =>{
     if (command == 'whoyoulike') {
         message.channel.send(' I love Rioshi. The best admin in the world ')
     }
+    if (command == 'who you love ') {
+        message.channel.send(' I love Alvis. The best boy  in the world ')
+    }
     if (command == 'ok') {
         message.channel.send('>~<')
     }
