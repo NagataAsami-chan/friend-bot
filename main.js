@@ -4,7 +4,17 @@ const { Player } = require('discord-player');
 
 const { MessageAttachment, MessageEmbed } = require('discord.js');
 
-const client = new Discord.Client();
+const { Client, Intents } = require('discord.js');
+
+global.client = new Client({
+    intents: [
+        Intents.FLAGS.GUILDS,
+        Intents.FLAGS.GUILD_MEMBERS,
+        Intents.FLAGS.GUILD_MESSAGES,
+        Intents.FLAGS.GUILD_VOICE_STATES
+    ],
+    disableMentions: 'everyone',
+});
 
 const prefix = '``'
 
@@ -23,6 +33,8 @@ client.once('ready', () => {
     console.error('maybe the bot is ready, just maybe...')
     console.log('Asami is online?');
 });
+
+
 
 
 client.on('message', message =>{
@@ -115,14 +127,20 @@ client.on('message', message =>{
         client.commands.get('play').execute(message, args)
     }
 });
-client.config = require('./config');
 
-global.player = new Player(client, client.config.opt.discordPlayer);
+
+
+client.config = require('./config');
+//bot configuration
+
+global.player = new Player(client, client.config.opt.discordPlayer);//create a new player
 
 client.on('ready', () => {
     client.user.setActivity('Monster Hunter Rise', { type: "PLAYING" })
 });
-//10 commend in total 
+require('./src/loader');
+require('./src/events');
+//noding the src folder
 
 
 client.login(process.env.token); //The bot token which have setted in heroku
