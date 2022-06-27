@@ -92,7 +92,7 @@ client.on('message', message =>{
         message.channel.send(' I love Rioshi. The best admin in the world ')
     }
     if (command == 'whoyoulove') {
-        message.channel.send(' I love Alvis. The best boy  in the world ')
+        message.channel.send(' I love Alvis. The best boy in the world ')
     }
     if (command == 'ok') {
         message.channel.send('>~<')
